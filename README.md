@@ -12,13 +12,13 @@ This is a quickly-built POC, so it's not ready for repeatable execution. Follow 
 
 1. Build and install the `Multiples` library as a jar. `mvn package install`
 1. `Multiples` is referenced by the UDF in the UDF's `pom.xml`, so `mvn install` is required.  
-  ```xml
-  <dependency>
-    <groupId>org.example.functions</groupId>
-    <artifactId>Multiples</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </dependency>
-  ```
+   ```xml
+   <dependency>
+     <groupId>org.example.functions</groupId>
+     <artifactId>Multiples</artifactId>
+     <version>1.0-SNAPSHOT</version>
+   </dependency>
+   ```
 1. Build the `MultipleUdf` project, which will create a fat jar in the `target` directory, `MultipleUdf-1.0-SNAPSHOT.jar`.
 1. Open up the pyspark shell `, referencing the additional `jar` in the classpath.  
   `pyspark --jars /Users/donaldsawyer/git/PysparkJavaUdfExample/MultipleUdf/target/MultipleUdf-1.0-SNAPSHOT.jar`
